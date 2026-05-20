@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  font-family: "PT Root UI";
+  font-size: 1.6vw;
+}
+
+.mainMenu {
+  background-color: white;
+  display: flex;
+  width: 60%;
+  padding: 2vw 1.6vw;
+  border-radius: 2vw;
+  justify-content: space-between;
+  margin: 1.6vw auto;
+}
+.mainMenuLink {
+  font-size: 1.6vw;
+  color: #222;
+  text-decoration: none;
+  transition: all ease 0.6s;
+}
+.mainMenuLink.active {
+  color: cornflowerblue;
+}
+.mainMenuLink.active:hover {
+  color: cornflowerblue;
+}
+.mainMenuLink:hover {
+  color: #777;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  background-color: white;
+  border-radius: 2vw;
+  margin: 1.6vw auto;
+  padding: 2vw;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  height: 3.75vw;
+  border: 0.06vw solid #999;
+  border-radius: 1.6vw;
+  padding: 0 1.6vw;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+input:focus {
+  outline: 0.1vw solid cornflowerblue;
+  border: 0.06vw solid cornflowerblue;
+}
+.placeholder {
+  position: relative;
+  width: 100%;
+}
+.placeholder::before {
+  position: absolute;
+  top: 1vw;
+  left: 1.6vw;
+  width: 100%;
+  height: 100%;
+  content: "тестовая надпись";
+  color: #999;
+}
+.placeholder:has(input[name="userName"])::before {
+  content: "Имя пользователя";
+}
+.placeholder:has(input[name="email"])::before {
+  content: "Электронная почта";
+}
+.placeholder:has(input[name="phone"])::before {
+  content: "Номер телефона";
+}
+.placeholder:has(input:focus)::before,
+.placeholder:has(input:not(:placeholder-shown))::before {
+  font-size: 0.9vw;
+  top: 0.4vw;
+  transition: all ease 0.3s;
+}
+form button {
+  width: 33%;
+  height: 3.75vw;
+  border: 0.06vw solid cornflowerblue;
+  border-radius: 1.6vw;
+  background-color: transparent;
+  font-size: 1.6vw;
+  color: cornflowerblue;
+  transition: all ease 0.6s;
+  cursor: pointer;
+}
+form button:hover {
+  color: #fff;
+  background-color: cornflowerblue;
+}
+.modalWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow: hidden;
+}
+.window {
+  width: 40%;
+  min-height: 20vw;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  font-size: 1.6vw;
+}
+
+.afisha {
+  margin: 2vw;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+.afishaCard {
+  width: 30%;
+  background-color: white;
+  border-radius: 2vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6vw;
+  position: relative;
+}
+.afishaDate {
+  text-align: right;
+  font-size: 1.2vw;
+  color: #777;
+}
+.afishaDuration {
+  font-size: 1.2vw;
+  color: cornflowerblue;
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  transition: 0.2s ease-in-out;
+}
+.afishaDuration:hover {
+  color: rgb(23, 104, 255);
+  cursor: pointer;
+}
+.afishaHeader {
+  font-weight: 500;
+}
+.afishaTimeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6vw;
+}
+.afishaTime {
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 1.2vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.6vw;
+  transition: 0.2s ease-in-out;
+}
+.afishaTime:hover {
+  background-color: rgb(43, 117, 255);
+  cursor: pointer;
+}
+.button {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  background-color: black;
+  color: white;
+  font-size: 1.6vw;
+  padding: 1vw 2vw;
+  margin: 2vw 0;
+  border-radius: 3vw;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  background-color: rgb(62, 255, 146);
+  color: black;
+  cursor: pointer;
+  animation: shake 0.3s ease-in-out infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Музей "Огни Москвы"</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="javascripts/scripts.js" defer></script>
+    <script src="javascripts/index.js" defer></script>
+  </head>
+  <body>
+    <div id="burger"></div>
+
+    <nav class="mainMenu">
+      <a class="mainMenuLink active" href="index.html">Главная</a>
+      <a class="mainMenuLink" href="about.html">О проекте</a>
+      <a class="mainMenuLink" href="projects.html">Проекты</a>
+      <a class="mainMenuLink" href="excursions.html">Экскурсии</a>
+      <a class="mainMenuLink" href="contacts.html">Контакты</a>
+      <a class="mainMenuLink" href="archive.html">Архив</a>
+    </nav>
+
+    <section>
+      <h1>Главная страница</h1>
+      <h2>Номера</h2>
+      <div class="afisha"></div>
+    </section>
+
+    <form action="">
+      <h2>подписаться на рассылку</h2>
+
+      <span class="placeholder">
+        <input type="text" name="userName" value="" placeholder="" />
+      </span>
+
+      <span class="placeholder">
+        <input type="email" name="email" value="" placeholder="" />
+      </span>
+
+      <select name="phoneCode">
+        <option value="+7">+7 (Россия)</option>
+        <option value="+33">+33 (Франция)</option>
+        <option value="+49">+49 (Германия)</option>
+        <option value="+1">+1 (США)</option>
+      </select>
+
+      <span class="placeholder">
+        <input type="tel" name="phone" value="" placeholder="" />
+      </span>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <div class="modalWindow">
+      <div class="window"></div>
+    </div>
+  </body>
+</html>
