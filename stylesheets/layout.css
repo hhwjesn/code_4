@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "inter";
+  font-family: "dance";
 }
 
 html {
@@ -12,11 +13,6 @@ body {
   background-color: #090808;
   font-size: 1.6vw;
   overflow-x: hidden;
-}
-
-@font-face {
-  font-family: "dance";
-  src: url("/fonts/dance_partner.woff");
 }
 
 h1 {
