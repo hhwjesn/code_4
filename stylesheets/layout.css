@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: "inter";
-  font-family: "dance";
 }
 
 html {
@@ -16,7 +15,7 @@ body {
 }
 
 h1 {
-  font-family: "dance";
+  font-family: "dance_partner";
   font-size: 14vw;
   color: #e7e7ec;
   line-height: 13vw;
