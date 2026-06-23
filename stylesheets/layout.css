@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
 }
 html {
   height: 100%;
@@ -7,23 +8,57 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #eee;
+  background-color: #090808;
   font-size: 1.6vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "dance";
+  font-size: 14vw;
+  color: #e7e7ec;
+  line-height: 13vw;
+}
+
+p,
+td {
+  font-family: "Inter";
+  font-size: 1.4vw;
+  /* font-weight: 400; */
+  color: #e7e7ec;
+  line-height: 1.6vw;
 }
 
 .mainMenu {
   display: flex;
   width: 70%;
+  height: 100%;
   padding: 2vw 1.6vw;
   justify-content: space-between;
-  margin: 1.6vw auto;
+  margin: 0vw auto;
+  align-items: center;
 }
+
+.indexHeader .mainMenu {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  z-index: 2;
+}
+.indexHeader video {
+  width: 100%;
+  height: 100%;
+}
+
 .mainMenuLink {
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.6vw;
-  color: #222;
+  color: #ffffff;
   text-decoration: none;
   transition: all ease 0.6s;
+  mix-blend-mode: difference;
 }
+
 .mainMenuLink.active {
   color: rgb(62, 97, 162);
 }
@@ -32,4 +67,268 @@ body {
 }
 .mainMenuLink:hover {
   color: rgb(85, 91, 103);
+}
+
+/* .productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.product {
+  width: 30%;
+  background-color: white;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  padding: 2vw;
+}
+.productInfo h3 {
+  font-weight: 500;
+}
+.productButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  background-color: #eee;
+  border-radius: 2vw;
+  padding: 0.6vw 1vw;
+}
+.productButtons button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.4vw;
+  cursor: pointer;
+} */
+
+.indexTwo,
+.indexThree,
+.indexFour,
+.footer {
+  /* background-color: #090808; */
+  padding-top: 6vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.indexTwo h1 {
+  position: absolute;
+}
+
+/* .indexTwo p {
+  position: absolute;
+} */
+.mission {
+  padding-top: 17vw;
+  padding-left: 36vw;
+}
+.pFirst {
+  height: 11vw;
+  width: 30vw;
+  margin-top: 35vw;
+  margin-left: 60vw;
+}
+
+/* КАРТОЧКИ НА ГЛАВНОЙ */
+.indexThree {
+  height: 100%;
+}
+
+.indexThree tbody {
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+
+.indexThree td {
+  border: 0.1vw solid #dddddd;
+  padding: 1.1vw;
+  vertical-align: top;
+}
+
+.indexThree td.photoTableOne,
+.indexThree td.photoTableTwo {
+  padding: 0;
+  width: 35vw;
+}
+
+.indexTableOne,
+.indexTableTwo {
+  height: 17vw;
+  margin-top: 8.6vw;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.indexTableOne tr,
+.indexTableTwo tr {
+  height: 17vw;
+}
+
+.photoTableOne img,
+.photoTableTwo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.nameProject {
+  width: 19vw;
+}
+
+/* СЛАЙДЕР */
+.indexFour {
+  height: 84vw;
+  margin-top: 20vw;
+}
+.indexFour img {
+  width: 100%;
+  height: 43vw;
+  margin-top: 3vw;
+}
+
+/* ФУТЕР */
+section.footer {
+  margin-top: 10vw;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  padding: 6vw 5vw 4vw 5vw;
+  box-sizing: border-box;
+}
+
+.footerLink,
+.year {
+  font-family: "Inter";
+  font-size: 1.6vw;
+  color: #e7e7ec;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footerColumnOne,
+.footerColumnTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 14vw;
+}
+
+.footerColumnTwo {
+  margin-left: 10vw;
+}
+
+.year {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+/* МАГАЗИН И РЕСТОРАН */
+
+.shop,
+.restaurant {
+  max-width: 90.3vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+body.shop-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #595959, #090808) fixed;
+}
+
+.price {
+  font-size: 0.9vw;
+}
+.shopRow,
+.restaurantRow {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 17vw;
+}
+
+.shop img,
+.restaurant img {
+  border: 0.1vw solid #dddddd;
+  width: 100%;
+  display: block;
+  margin-bottom: 1.1vw;
+}
+
+.firstThing,
+.secondThing,
+.thirdThing,
+.fourThing,
+.fiveThing,
+.sixThing,
+.sevenThing,
+.eightThing,
+.nineThing,
+.tenThing,
+.firstFood,
+.secondFood,
+.thirdFood,
+.fourFood {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.firstThing,
+.thirdThing,
+.sevenThing,
+.nineThing,
+.firstFood,
+.thirdFood {
+  margin-right: 1.1vw;
+}
+.secondThing,
+.eightThing,
+.secondFood {
+  margin-right: 19.4vw;
+}
+.fiveThing {
+  margin-right: 56vw;
+}
+
+.eightThing p {
+  width: 17.7vw;
+}
+
+.ballShop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.ballShop img {
+  border: none;
+}
+
+.ballRest {
+  position: absolute;
+  bottom: -64vw;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
 }
