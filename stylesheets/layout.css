@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-family: "dance_partner";
+  font-family: "dance";
   font-size: 14vw;
   color: #e7e7ec;
   line-height: 13vw;
@@ -112,7 +112,10 @@ td {
 .indexTwo,
 .indexThree,
 .indexFour,
-.footer {
+.footer,
+.eventsTwo,
+.eventsThree,
+.roomsTwo {
   /* background-color: #090808; */
   padding-top: 6vw;
   padding-left: 5vw;
@@ -332,4 +335,86 @@ body.shop-page {
   transform: translateX(-50%);
   z-index: -1;
   pointer-events: none;
+}
+
+/* МЕРОПРИЯТИЯ */
+.eventsTwo p {
+  width: 35vw;
+  height: 11.6vw;
+  margin-left: 53vw;
+}
+.headEventsTwo {
+  margin-left: 30vw;
+}
+
+.eventsThree {
+  height: auto;
+  box-sizing: border-box;
+  margin-top: 2vw;
+}
+
+.eventsTableOne {
+  width: 90vw;
+  height: 23vw;
+  border-collapse: collapse;
+  margin-top: 0.8vw;
+}
+
+.eventsTableOne td {
+  padding-left: 1.1vw;
+  vertical-align: middle;
+  border: 0.1vw solid #dddddd;
+}
+
+.eventsTableOne td.first-child {
+  width: 17vw;
+}
+
+.eventsTableOne td.eventsDate {
+  width: 18vw;
+}
+
+/* НОМЕРА */
+
+.roomsTwo {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.roomTable {
+  width: 91vw;
+  height: 23vw;
+  border-collapse: collapse;
+  margin-top: 3vw;
+}
+
+.roomTable td {
+  vertical-align: top;
+  border: 0.1vw solid #dddddd;
+}
+
+.roomsName {
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+  padding-left: 1.1vw;
+  width: 17vw;
+}
+
+.roomDescription {
+  height: 6.6vw;
+  width: 36vw;
+  padding-top: 0.8vw;
+  padding-left: 1.1vw;
+  vertical-align: top;
+}
+
+.photoRoom {
+  width: 36vw;
+  padding: 0;
+}
+.photoRoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
