@@ -6,6 +6,7 @@
     <title>Номера</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/scripts.js" defer></script>
+    <script src="javascripts/rooms.js" defer></script>
   </head>
   <body>
     <section class="roomsHeader">
@@ -28,7 +29,14 @@
       <table class="roomTable">
         <tbody>
           <tr>
-            <td class="roomsName">Стандартный одноместный</td>
+            <!-- Добавлены data-атрибуты и класс active -->
+            <td
+              class="roomsName active"
+              data-description="Уютный номер для одного гостя с удобной кроватью, маской для сна и дневником для записей. Всё необходимое, чтобы заснуть одним человеком, а проснуться совершенно другим."
+              data-image="images/room1.jpg"
+            >
+              Стандартный одноместный
+            </td>
             <td rowspan="5" class="roomDescription">
               Уютный номер для одного гостя с удобной кроватью, маской для сна
               и дневником для записей. Всё необходимое, чтобы заснуть одним
@@ -40,19 +48,43 @@
           </tr>
 
           <tr>
-            <td class="roomsName">Стандартный двухместный</td>
+            <td
+              class="roomsName"
+              data-description="Просторный номер для двоих. Идеально сбалансированное пространство, где раздельные или общая кровать помогут синхронизировать ваши альтернативные погружения."
+              data-image="images/room2.jpg"
+            >
+              Стандартный двухместный
+            </td>
           </tr>
 
           <tr>
-            <td class="roomsName">Делюкс</td>
+            <td
+              class="roomsName"
+              data-description="Повышенный уровень комфорта. Номер Делюкс предлагает расширенное пространство, дизайнерскую мебель и панорамный вид на сад для глубокой релаксации."
+              data-image="images/room3.jpg"
+            >
+              Делюкс
+            </td>
           </tr>
 
           <tr>
-            <td class="roomsName">Люкс</td>
+            <td
+              class="roomsName"
+              data-description="Изысканный Люкс с отдельной зоной отдыха. Включает в себя персональный набор для чайных церемоний и систему световой терапии для мягкого пробуждения."
+              data-image="images/room4.jpg"
+            >
+              Люкс
+            </td>
           </tr>
 
           <tr>
-            <td class="roomsName">Президентский</td>
+            <td
+              class="roomsName"
+              data-description="Высшая степень уединения и роскоши. Огромные апартаменты с персональной гидромассажной ванной, камином и полным комплектом для премиального восстановления духа."
+              data-image="images/room5.jpg"
+            >
+              Президентский
+            </td>
           </tr>
         </tbody>
       </table>
