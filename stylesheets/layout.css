@@ -25,7 +25,6 @@ p,
 td {
   font-family: "Inter";
   font-size: 1.4vw;
-  /* font-weight: 400; */
   color: #e7e7ec;
   line-height: 1.6vw;
 }
@@ -40,24 +39,37 @@ td {
   align-items: center;
 }
 
-.indexHeader .mainMenu {
+.indexHeader .mainMenu,
+.aboutHeader .mainMenu,
+.contactsHeader .mainMenu,
+.eventsHeader .mainMenu,
+.restaurantHeader .mainMenu,
+.roomsHeader .mainMenu,
+.shopHeader .mainMenu {
   position: absolute;
   top: 0;
   left: 15%;
   z-index: 2;
 }
-.indexHeader video {
+.indexHeader video,
+.aboutHeader video,
+.contactsHeader video,
+.eventsHeader video,
+.restaurantHeader video,
+.roomsHeader video,
+.shopHeader video {
   width: 100%;
   height: 100%;
 }
 
 .mainMenuLink {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Inter";
   font-size: 1.6vw;
   color: #ffffff;
   text-decoration: none;
   transition: all ease 0.6s;
   mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 .mainMenuLink.active {
@@ -80,7 +92,6 @@ td {
 .aboutOne,
 .zineClick,
 .contactsTwo {
-  /* background-color: #090808; */
   padding-top: 6vw;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -90,9 +101,22 @@ td {
   position: absolute;
 }
 
-/* .indexTwo p {
-  position: absolute;
-} */
+/* СЪЕЗД ВНИЗ ТЕКСТА ----------------------------------------*/
+.indexTwo {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+}
+
+.our {
+  font-family: "dance";
+  font-size: 14vw;
+  color: #e7e7ec;
+  line-height: 13vw;
+  transition: top 0.1s ease-out;
+}
+
+/* СЪЕЗД ВНИЗ ТЕКСТА ----------------------------------------*/
 .mission {
   padding-top: 17vw;
   padding-left: 36vw;
@@ -104,7 +128,7 @@ td {
   margin-left: 60vw;
 }
 
-/* КАРТОЧКИ НА ГЛАВНОЙ */
+/* КАРТОЧКИ НА ГЛАВНОЙ ----------------------------------------*/
 .indexThree {
   height: 100%;
 }
@@ -150,18 +174,43 @@ td {
   width: 19vw;
 }
 
-/* СЛАЙДЕР */
+/* СЛАЙДЕР ----------------------------------------*/
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 3vw;
+  width: 100%;
+}
+
 .indexFour {
   height: 84vw;
   margin-top: 20vw;
 }
 .indexFour img {
-  width: 100%;
+  width: 80vw;
   height: 43vw;
   margin-top: 3vw;
 }
 
-/* ФУТЕР */
+.arrowRight,
+.arrowLeft {
+  width: 20px;
+  height: 20px;
+  border-top: 0.1vw solid #e7e7ec;
+  border-right: 0.1vw solid #e7e7ec;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.arrowRight {
+  transform: rotate(45deg);
+}
+.arrowLeft {
+  transform: rotate(-135deg);
+}
+
+/* ФУТЕР ----------------------------------------*/
 section.footer {
   margin-top: 10vw;
   padding: 0;
@@ -205,7 +254,7 @@ section.footer {
   align-self: flex-end;
 }
 
-/* МАГАЗИН И РЕСТОРАН */
+/* МАГАЗИН И РЕСТОРАН ----------------------------------------*/
 
 .shop,
 .restaurant {
@@ -222,6 +271,13 @@ body.shop-page {
   background: linear-gradient(to bottom, #595959, #090808) fixed;
 }
 
+.imageCont {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.1vw;
+  overflow: hidden;
+}
+
 .price {
   font-size: 0.9vw;
 }
@@ -230,6 +286,42 @@ body.shop-page {
   display: flex;
   align-items: flex-end;
   margin-top: 17vw;
+  transition: opacity 0.4s ease-in-out;
+}
+.hoverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.imageCont:hover .mainImg {
+  opacity: 0;
+}
+.imageCont:hover .hoverImg {
+  opacity: 1;
+}
+
+.buyButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #090808;
+  color: #e7e7ec;
+  border: 0.1vw solid #e7e7ec;
+  padding: 0.8vw 2.2vw;
+  font-family: "Inter";
+  font-size: 1.4vw;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+.imageCont:hover .buyButton {
+  opacity: 1;
 }
 
 .shop img,
@@ -237,6 +329,9 @@ body.shop-page {
   border: 0.1vw solid #dddddd;
   width: 100%;
   display: block;
+  transition: opacity 0.8s ease-in-out;
+}
+.restaurant img {
   margin-bottom: 1.1vw;
 }
 
@@ -300,7 +395,7 @@ body.shop-page {
 
 .ballRest {
   position: absolute;
-  bottom: -134vw;
+  bottom: -160vw;
   right: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -308,7 +403,181 @@ body.shop-page {
   pointer-events: none;
 }
 
-/* МЕРОПРИЯТИЯ */
+.menu {
+  margin-top: 10vw;
+}
+
+.bookButton {
+  display: block;
+  width: 15vw;
+  height: 3.5vw;
+  margin: 18vw auto 0 auto;
+  background-color: #090808;
+  color: #e7e7ec;
+  border: 0.1vw solid #e7e7ec;
+  font-family: "Inter";
+  font-size: 1.4vw;
+  cursor: pointer;
+}
+
+/* ФОРМА БРОНИ ----------------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 8, 8, 0.7);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.modalContent {
+  margin: 5% auto;
+  padding: 3vw 4vw;
+  border: 0.1vw solid #e7e7ec;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  animation: modalopen 0.3s ease-out;
+  background-color: #090808;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 1.5vw;
+  height: 1.5vw;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.closeBtn::before,
+.closeBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.1vw;
+  min-height: 1.5px;
+  background-color: #e7e7ec;
+}
+.closeBtn:hover {
+  animation: shake 0.3s ease-in-out infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-0.05vw);
+  }
+  40% {
+    transform: translateY(0.05vw);
+  }
+  60% {
+    transform: translateY(-0.05vw);
+  }
+  80% {
+    transform: translateY(0.05vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.closeBtn::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.closeBtn::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.formSubtitle {
+  font-family: "Inter";
+  font-size: 1.4vw;
+  color: #e7e7ec;
+  opacity: 0.7;
+  margin: 0 0 2vw 0;
+}
+
+.nameFields {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.2vw;
+}
+
+.formGroup label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9vw;
+  color: #e7e7ec;
+  margin-bottom: 0.4vw;
+  text-transform: uppercase;
+}
+
+.formGroup input {
+  background: transparent;
+  border: 0.1vw solid #e7e7ec;
+  height: 2.5vw;
+  min-height: 35px;
+  padding-left: 1vw;
+  color: #e7e7ec;
+  font-family: "Inter", sans-serif;
+  font-size: 1vw;
+  outline: none;
+}
+
+.formGroup input:focus {
+  border-color: #e7e7ec;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 3vw;
+  min-height: 40px;
+  margin-top: 1vw;
+  background-color: #090808;
+  color: #e7e7ec;
+  border: 0.1vw solid #e7e7ec;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #e7e7ec;
+  color: #090808;
+}
+
+/* МЕРОПРИЯТИЯ ----------------------------------------*/
 .eventsTwo p {
   width: 35vw;
   height: 11.6vw;
@@ -345,7 +614,7 @@ body.shop-page {
   width: 18vw;
 }
 
-/* НОМЕРА */
+/* НОМЕРА ----------------------------------------*/
 
 .roomsTwo {
   height: auto;
@@ -390,7 +659,7 @@ body.shop-page {
   display: block;
 }
 
-/* О НАС */
+/* О НАС ----------------------------------------*/
 .aboutFirst {
   width: 17vw;
   height: 18vw;
@@ -423,15 +692,58 @@ body.shop-page {
   margin-left: 60vw;
 }
 
-.zineClick img {
+/* КЛИКЕР ЗИН---------------------------------------- */
+.zineClick {
+  position: relative;
+  cursor: pointer;
+  margin-top: 4vw;
+}
+.mainImgZine {
   width: 59vw;
   height: 42vw;
   margin-top: 5vw;
   margin-left: 15vw;
   margin-bottom: 5vw;
+  display: block;
+}
+.zineClick .zinePage {
+  position: absolute;
+  top: 5vw;
+  left: 15vw;
+  width: 59vw;
+  height: 42vw;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
 }
 
-/* КОНТАКТЫ */
+.zineClick .zinePage:nth-of-type(1) {
+  transform: rotate(1.5deg) scale(1.01) translateY(0.5vw);
+}
+.zineClick .zinePage:nth-of-type(2) {
+  transform: rotate(-2deg) scale(1.03) translateY(1vw);
+}
+.zineClick .zinePage:nth-of-type(3) {
+  transform: rotate(2.5deg) scale(1.05) translateY(1.5vw);
+}
+.zineClick .zinePage:nth-of-type(4) {
+  transform: rotate(-1.8deg) scale(1.07) translateY(2vw);
+}
+.zineClick .zinePage:nth-of-type(5) {
+  transform: rotate(3deg) scale(1.09) translateY(2.5vw);
+}
+.zineClick .zinePage:nth-of-type(6) {
+  transform: rotate(-2.5deg) scale(1.11) translateY(3vw);
+}
+
+.zineClick .zinePage.active {
+  opacity: 1;
+}
+
+/* КОНТАКТЫ ----------------------------------------*/
 
 .contactsTwo p {
   margin-bottom: 1.4vw;

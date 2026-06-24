@@ -6,17 +6,22 @@
     <title>О нас</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/scripts.js" defer></script>
+    <script src="javascripts/about.js" defer></script>
   </head>
   <body>
-    <nav class="mainMenu">
-      <a class="mainMenuLink" href="shop.html">Магазин</a>
-      <a class="mainMenuLink" href="restaurant.html">Ресторан</a>
-      <a class="mainMenuLink" href="rooms.html">Номера</a>
-      <a class="mainMenuLink" href="index.html">Главная</a>
-      <a class="mainMenuLink" href="events.html">Мероприятия</a>
-      <a class="mainMenuLink active" href="about.html">О нас</a>
-      <a class="mainMenuLink" href="contacts.html">Контакты</a>
-    </nav>
+    <section class="aboutHeader">
+      <video src="images/video.02.mp4" autoplay playsinline muted loop></video>
+
+      <nav class="mainMenu">
+        <a class="mainMenuLink" href="shop.html">Магазин</a>
+        <a class="mainMenuLink" href="restaurant.html">Ресторан</a>
+        <a class="mainMenuLink" href="rooms.html">Номера</a>
+        <a class="mainMenuLink" href="index.html">Главная</a>
+        <a class="mainMenuLink" href="events.html">Мероприятия</a>
+        <a class="mainMenuLink active" href="about.html">О нас</a>
+        <a class="mainMenuLink" href="contacts.html">Контакты</a>
+      </nav>
+    </section>
 
     <section class="aboutOne">
       <h1>О нас</h1>
@@ -38,8 +43,17 @@
       </p>
     </section>
 
-    <section class="zineClick">
-      <img src="images/zine1.jpg" alt="" />
+    <section class="zineSection">
+      <div class="zineClick" id="zine1">
+        <img class="mainImgZine" src="images/zine1.jpg" alt="" />
+
+        <img class="zinePage" src="images/zine2.jpg" alt="" />
+        <img class="zinePage" src="images/zine3.jpg" alt="" />
+        <img class="zinePage" src="images/zine4.jpg" alt="" />
+        <img class="zinePage" src="images/zine5.jpg" alt="" />
+        <img class="zinePage" src="images/zine6.jpg" alt="" />
+        <img class="zinePage" src="images/zine7.jpg" alt="" />
+      </div>
     </section>
 
     <section class="footer">

@@ -6,17 +6,22 @@
     <title>Ресторан</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="javascripts/scripts.js" defer></script>
+    <script src="javascripts/restaurant.js" defer></script>
   </head>
   <body>
-    <nav class="mainMenu">
-      <a class="mainMenuLink" href="shop.html">Магазин</a>
-      <a class="mainMenuLink active" href="restaurant.html">Ресторан</a>
-      <a class="mainMenuLink" href="rooms.html">Номера</a>
-      <a class="mainMenuLink" href="index.html">Главная</a>
-      <a class="mainMenuLink" href="events.html">Мероприятия</a>
-      <a class="mainMenuLink" href="about.html">О нас</a>
-      <a class="mainMenuLink" href="contacts.html">Контакты</a>
-    </nav>
+    <section class="restaurantHeader">
+      <video src="images/video.05.mp4" autoplay playsinline muted loop></video>
+
+      <nav class="mainMenu">
+        <a class="mainMenuLink" href="shop.html">Магазин</a>
+        <a class="mainMenuLink active" href="restaurant.html">Ресторан</a>
+        <a class="mainMenuLink" href="rooms.html">Номера</a>
+        <a class="mainMenuLink" href="index.html">Главная</a>
+        <a class="mainMenuLink" href="events.html">Мероприятия</a>
+        <a class="mainMenuLink" href="about.html">О нас</a>
+        <a class="mainMenuLink" href="contacts.html">Контакты</a>
+      </nav>
+    </section>
 
     <section class="restaurant">
       <h1 class="menu">Меню</h1>
@@ -45,6 +50,8 @@
           <p class="price">950 RUB</p>
         </div>
       </div>
+
+      <button class="bookButton">Забронировать</button>
 
       <div class="restaurantRow">
         <div class="fiveFood">
@@ -89,5 +96,48 @@
       </nav>
     </section>
     <div class="ballRest"><img src="images/ballRest.png" alt="" /></div>
+
+    <div id="lectureModal" class="modal">
+      <div class="modalContent">
+        <button class="closeBtn"></button>
+
+        <p class="formSubtitle">
+          Заполните форму ниже — мы свяжемся с вами для подтверждения
+        </p>
+
+        <form id="lectureForm">
+          <div class="nameFields">
+            <div class="formGroup">
+              <label for="firstName">Имя</label>
+              <input type="text" id="firstName" required />
+            </div>
+
+            <div class="formGroup">
+              <label for="peopleNumber">Количество человек</label>
+              <input
+                type="number"
+                id="peopleNumber"
+                name="peopleNumber"
+                min="1"
+                max="8"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label for="time">Время</label>
+            <input type="time" id="time" required />
+          </div>
+
+          <div class="formGroup">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" required />
+          </div>
+
+          <button type="submit" class="submitBtn">Забронировать стол</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

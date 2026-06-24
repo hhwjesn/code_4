@@ -4,3 +4,80 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 50%;
+  /* background-color: #090808; */
+  font-size: 1.6vw;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #090808, #595959) fixed;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20vw;
+  margin-right: 64vw;
+}
+
+h1 {
+  font-family: "dance";
+  font-size: 14vw;
+  color: #e7e7ec;
+  margin-bottom: 0.8vw;
+}
+
+p {
+  font-family: "Inter";
+  font-size: 1.4vw;
+  color: #e7e7ec;
+}
+
+button {
+  width: 8vw;
+  height: 2.5vw;
+  background-color: #222222;
+  border: 1px solid #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1.6vw;
+}
+
+button p {
+  font-family: "Inter";
+  font-size: 0.9vw;
+  color: #e7e7ec;
+}
+
+button:hover {
+  animation: shake 0.3s ease-in-out infinite;
+  background-color: #090808;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-0.05vw);
+  }
+  40% {
+    transform: translateY(0.05vw);
+  }
+  60% {
+    transform: translateY(-0.05vw);
+  }
+  80% {
+    transform: translateY(0.05vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
