@@ -70,52 +70,16 @@ td {
   color: rgb(85, 91, 103);
 }
 
-/* .productList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-}
-.product {
-  width: 30%;
-  background-color: white;
-  border-radius: 2vw;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.productInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2vw;
-  padding: 2vw;
-}
-.productInfo h3 {
-  font-weight: 500;
-}
-.productButtons {
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-  background-color: #eee;
-  border-radius: 2vw;
-  padding: 0.6vw 1vw;
-}
-.productButtons button {
-  background-color: transparent;
-  border: none;
-  font-size: 1.4vw;
-  cursor: pointer;
-} */
-
 .indexTwo,
 .indexThree,
 .indexFour,
 .footer,
 .eventsTwo,
 .eventsThree,
-.roomsTwo {
+.roomsTwo,
+.aboutOne,
+.zineClick,
+.contactsTwo {
   /* background-color: #090808; */
   padding-top: 6vw;
   padding-left: 5vw;
@@ -289,7 +253,11 @@ body.shop-page {
 .firstFood,
 .secondFood,
 .thirdFood,
-.fourFood {
+.fourFood,
+.fiveFood,
+.sixFood,
+.sevenFood,
+.eightFood {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -300,12 +268,15 @@ body.shop-page {
 .sevenThing,
 .nineThing,
 .firstFood,
-.thirdFood {
+.thirdFood,
+.fiveFood,
+.sevenFood {
   margin-right: 1.1vw;
 }
 .secondThing,
 .eightThing,
-.secondFood {
+.secondFood,
+.sixFood {
   margin-right: 19.4vw;
 }
 .fiveThing {
@@ -329,7 +300,7 @@ body.shop-page {
 
 .ballRest {
   position: absolute;
-  bottom: -64vw;
+  bottom: -134vw;
   right: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -417,4 +388,71 @@ body.shop-page {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* О НАС */
+.aboutFirst {
+  width: 17vw;
+  height: 18vw;
+}
+.aboutSecond {
+  width: 35vw;
+  height: 6.6vw;
+  margin-top: 1vw;
+  margin-left: 55vw;
+}
+.aboutDom {
+  width: 72vw;
+  height: 40vw;
+  margin-left: 18vw;
+  margin-top: -18vw;
+}
+.zineCover {
+  margin-top: 26vw;
+  margin-left: 41vw;
+  width: 17vw;
+  height: 24vw;
+}
+.zine {
+  margin-top: -18vw;
+  margin-left: 60vw;
+}
+.aboutZine {
+  width: 30vw;
+  height: 3vw;
+  margin-left: 60vw;
+}
+
+.zineClick img {
+  width: 59vw;
+  height: 42vw;
+  margin-top: 5vw;
+  margin-left: 15vw;
+  margin-bottom: 5vw;
+}
+
+/* КОНТАКТЫ */
+
+.contactsTwo p {
+  margin-bottom: 1.4vw;
+}
+.contactsTwo h1 {
+  margin-bottom: 2vw;
+}
+
+.contactsPhotoOne {
+  width: 35vw;
+  height: 30vw;
+}
+.contactsPhotoTwo {
+  width: 36vw;
+  height: 19vw;
+  position: absolute;
+  right: 4.6vw;
+  margin-top: 11vw;
+}
+.adress {
+  position: absolute;
+  right: 14vw;
+  margin-top: 1vw;
 }
